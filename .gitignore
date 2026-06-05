@@ -1,0 +1,12 @@
+# Environment variables (secrets)
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local generated files
+generated_files/*.pdf
