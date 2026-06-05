@@ -1,0 +1,27 @@
+{
+  "cover_letter": {
+    "applicant": {
+      "name": "Muhammad Ahmed Ali",
+      "address": "Adolf-Reichwein-Str. 11, 57076 Siegen",
+      "phone": "+49-15228596456",
+      "email": "muhammad4.ali@student.uni-siegen.de"
+    },
+    "company": {
+      "name": "advercharge GmbH",
+      "contact_person": "Frau Mittas"
+    },
+    "subject": "Initiativbewerbung als Werkstudent (m/w/d) im Bereich IT / Technische Systementwicklung",
+    "date": "22.10.2025",
+    "location": "Siegen",
+    "body": {
+      "introduction": "Durch Ihre Anzeige wurde ich auf die Möglichkeit aufmerksam, als Werkstudent Teil der eltherm Group zu werden. Als Masterstudent der Informatik an der Universität Siegen und aufgrund der Nähe zu Burbach freue ich mich besonders auf die Chance, mein Wissen in einem technisch anspruchsvollen Umfeld, das in den erneuerbaren Energien tätig ist, einzubringen.",
+      "desired_role": "Ich möchte mich aktiv in Ihrer IT-Abteilung oder der technischen Systementwicklung engagieren.",
+      "skills": {
+        "backend_development": "Ich verfüge über Erfahrung in der Entwicklung mit .NET (C#), Node.js und RESTful APIs, was für interne Tools oder die Anbindung externer Dienste nützlich ist.",
+        "system_architecture": "Durch die Arbeit mit Docker und dem Design skalierbarer Architekturen kann ich bei der Pflege und Weiterentwicklung Ihrer industriellen IT-Lösungen unterstützen."
+      },
+      "motivation": "Ich bin hochmotiviert, meine Problem-Solving Skills und die Fähigkeit zur eigenständigen Verantwortungsübernahme (wie in Ihrem Profil gewünscht) in Ihr Team einzubringen.",
+      "closing": "Ich freue mich darauf, in einem persönlichen Gespräch die potenziellen Projekte in den Bereichen IT oder Technologie zu erörtern."
+    },
+    "signature": "Muhammad Ahmed Ali"  }
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ resume.personal_details.Name }} - Senior Software Engineer Resume</title>
+
+    <style>
+        @page {
+            size: A4;
+            margin: 10mm 20mm;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.2;
+            color: #000; /* Ensure text is black by default */
+        }
+
+        /* Base Paragraph Style (11pt, black) */
+        p {
+            font-size: 11pt;
+            margin: 2px 0;
+            color: #000;
+        }
+
+        /* Section Title Paragraph Style (13pt, bold, italic) */
+        .sections {
+            font-size: 13pt;
+            margin: 15px 0 10px 0;
+            color: #000;
+            font-weight: bold;
+            font-style: italic;
+        }
+        
+        /* List Item Styling */
+        ul {
+            margin-top: 5px;
+            margin-left: 20px;
+            padding-left: 0;
+            list-style-type: disc;
+        }
+        
+        ul li {
+            font-size: 11pt;
+            margin-bottom: 2px;
+        }
+
+        strong {
+            font-size: 12pt;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #005f99;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .job, .project {
+            margin-left: 5px;
+        }
+
+        .project strong { 
+            font-size: 11pt;
+        }
+        
+        .job-meta {
+            margin-bottom: 5px;
+            font-size: 11pt;
+        }
+        
+        .job-company-name {
+            font-weight: bold;
+            flex-grow: 1;
+        }
+        
+        .job-duration {
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CONTACT SECTION -->
+    <section>
+        <p><strong>{{ resume.personal_details.Name }}</strong></p>
+        <p>Email: {{ resume.personal_details.Email }}</p> 
+        <p>Phone: {{ resume.personal_details.Phone_WhatsApp }}</p>
+        <p>LinkedIn: <a href="{{ resume.personal_details.LinkedIn }}">{{ resume.personal_details.LinkedIn }}</a></p>
+        <p>GitHub: {{ resume.personal_details.Github }}</p>
+    </section>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <section>
+        <p class="sections">Professional Summary</p>
+        <p>{{ resume.professional_summary }}</p>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section>
+        <p class="sections">Technical Skills</p>
+        <ul>
+            {% for key, values in resume.technical_skills.items() %}
+                <li><strong>{{ key|replace('_', ' & ') }}:</strong> {{ values|join(', ') }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section>
+        <p class="sections">Work Experience</p>
+        
+        {% for job in resume.work_experience %}
+        <div class="job">
+            <p><strong>{{ job.role }}</strong></p>
+            <div class="job-meta">
+                <span class="job-company-name">{{ job.company }}</span> |
+                <span class="job-duration">{{ job.time_period }}</span>
+            </div>
+            <ul>
+                {% for contribution in job.contributions %}
+                <li>{{ contribution }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+        
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+        <p class="sections">Education</p>
+        <p><strong>{{ resume.education.degree }}</strong></p>
+        <p>{{ resume.education.institution }} <em>{{ resume.education.time_period }}</em> | Grade: {{ resume.education.grade }}</p>
+    </section>
+    
+    <!-- SOFT SKILLS -->
+    <section>
+        <p class="sections">Soft Skills</p>
+        <ul>
+            {% for skill in resume.soft_skills %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <!-- HIGHLIGHTED PROJECTS -->
+    <section>
+        <p class="sections">Highlighted Projects</p>
+        
+        {% for proj in resume.highlighted_projects %}
+        <div class="project">
+            <p><strong>{{ proj.project_name }}</strong></p>
+            <p><strong>Company:</strong> {{ proj.company }}</p>
+            <p><strong>Role:</strong> {{ proj.role }}</p>
+            <p><strong>Technologies:</strong> {{ proj.technologies|join(', ') }}</p>
+            <p><strong>Description:</strong> {{ proj.description }}</p>
+            <p><strong>Key Contributions:</strong></p>
+            <ul>
+                {% for contribution in proj.contributions %}
+                <li>{{ contribution }}</li>
+                {% endfor %}
+            </ul>
+            {% if proj.demo or proj.website or proj.app_link or proj.demo_link %}
+            <p>
+                {% if proj.demo %}<strong>Demo:</strong> <a href="{{ proj.demo }}">{{ proj.demo }}</a>{% endif %}
+                {% if proj.website %}<strong>Website:</strong> <a href="{{ proj.website }}">{{ proj.website }}</a>{% endif %}
+                {% if proj.app_link %}<strong>App Link:</strong> <a href="{{ proj.app_link }}">{{ proj.app_link }}</a>{% endif %}
+                {% if proj.demo_link %}<strong>Demo Link:</strong> <a href="{{ proj.demo_link }}">{{ proj.demo_link }}</a>{% endif %}
+            </p>
+            {% endif %}
+        </div>
+        {% endfor %}
+        
+    </section>
+
+</body>
+</html>

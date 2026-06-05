@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Ahmed Ali - Resume</title>
+
+    <style>
+/* Page Settings for A4 */
+@page {
+    size: A4;
+    margin: 15mm 20mm; /* top/bottom, left/right */
+}
+
+/* Wrapper to center content on page */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.2;
+    color: #000;
+    width: 210mm; /* A4 width */
+    max-width: 100%;
+    margin: 0 auto; /* center horizontally */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Paragraph */
+p {
+    font-size: 11pt;
+    margin: 2px 0;
+    color: #000;
+}
+
+/* Section Titles */
+.sections {
+    font-size: 13pt;
+    margin: 15px 0 10px 0;
+    font-weight: bold;
+    font-style: italic;
+    color: #000;
+}
+
+/* Lists */
+ul {
+    margin-top: 5px;
+    margin-left: 20px;
+    padding-left: 0;
+    list-style-type: disc;
+}
+
+ul li {
+    font-size: 11pt;
+    margin-bottom: 2px;
+}
+
+/* Bold Subheadings in Lists */
+ul li strong {
+    font-size: 11pt;
+}
+
+/* Job & Project Headings */
+.job > p strong,
+.project > p strong,
+section p strong {
+    font-size: 11pt;
+    font-weight: bold;
+}
+
+/* Hyperlinks */
+a {
+    color: #005f99;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Job & Project Containers */
+.job,
+.project {
+    margin-left: 5px;
+}
+
+/* Job Metadata (location, duration) */
+.job-meta {
+    margin-bottom: 5px;
+    font-size: 11pt;
+}
+
+.job-company-name {
+    font-weight: bold;
+    flex-grow: 1;
+}
+
+.job-duration {
+    flex-shrink: 0;
+}
+
+/* Section Spacing */
+section {
+    margin-bottom: 20px;
+}
+
+/* Ensure no overflow when printing */
+@media print {
+    body {
+        width: auto;
+        margin: 0;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- CONTACT SECTION -->
+    <section>
+        <p><strong>Muhammad Ahmed Ali</strong></p>
+        <p>Email: muhammad4.ali@student.uni-siegen.de</p>
+        <p>Phone: +49-15228596456</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/muhammad-ahmed-ali-computer-scientist/">https://linkedin.com/in/muhammad-ahmed-ali-computer-scientist/</a></p>
+        <p>GitHub: <a href="https://github.com/AhmedAli288">https://github.com/AhmedAli288</a></p>
+    </section>
+
+<!-- PROFESSIONAL SUMMARY -->
+<section>
+    <p class="sections">Professional Summary</p>
+    <p>Computer Science Master’s student at the University of Siegen with hands-on experience in full-stack and Web3 development. Skilled in designing and building scalable, modular systems using React, Node.js, TypeScript, and PostgreSQL. Experienced in enterprise backend systems, REST APIs, microservices, containerization (Docker), and CI/CD pipelines. Demonstrated ability to develop e-commerce platforms, NFT marketplaces, project management tools, and automation solutions. Proficient in Python for NLP, OCR, and machine learning, showcasing versatility across web, blockchain, and AI-driven applications. Seeking a Working Student position in IT or Technical Development to apply academic knowledge and practical experience to industrial software and system solutions.</p>
+</section>
+
+
+    <!-- TECHNICAL SKILLS -->
+    <section>
+        <p class="sections">Technical Skills</p>
+        <ul>
+            <li><strong>Languages & Frameworks:</strong> JavaScript, TypeScript, Node.js, Express.js, React, Vue.js, .NET (C#), HTML, CSS</li>
+            <li><strong>Databases:</strong> PostgreSQL, MySQL, MongoDB, Prisma ORM</li>
+            <li><strong>Web & API Development:</strong> REST APIs, Web3 integration, NFT marketplaces, Full-Stack Architecture</li>
+            <li><strong>DevOps & Tools:</strong> Docker, CI/CD, Git, GitHub, Linux, Agile/Scrum, JIRA</li>
+            <li><strong>Concepts & Algorithms:</strong> Object-Oriented Programming, Data Structures & Algorithms, Modular & Scalable System Design</li>
+            <li><strong>Additional:</strong> OCR & PDF Processing (Python, OpenCV, EasyOCR), NLP & TF-IDF, Neural Networks (Python, NumPy)</li>
+        </ul>
+    </section>
+
+<!-- WORK EXPERIENCE -->
+<section>
+    <p class="sections">Work Experience</p>
+
+    <div class="job">
+        <p><strong>Software Engineer — LetsRemotify</strong></p>
+        <div class="job-meta">
+            <span class="job-company-name">Remote</span> |
+            <span class="job-duration">06/2022 – 12/2024</span>
+        </div>
+        <ul>
+            <li>Led a small team of 2–3 juniors, reviewing code and guiding project structure improvements.</li>
+            <li>Refactored existing projects in NestJS, Next.js, MERN, making them easier to maintain and scale.</li>
+            <li>Built and deployed full-stack web apps with React, Node.js, PostgreSQL, MongoDB, Docker, and Heroku.</li>
+            <li>Developed React Native mobile apps with Firebase integration for real-time updates and push notifications.</li>
+            <li>Designed REST APIs and set up CI/CD pipelines to streamline development and deployments.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <p><strong>Software Engineer — AMMAG Technologies</strong></p>
+        <div class="job-meta">
+            <span class="job-company-name">Lahore, Pakistan</span> |
+            <span class="job-duration">12/2021 – 05/2022</span>
+        </div>
+        <ul>
+            <li>Built and maintained MERN stack and React Native apps, improving frontend performance and usability across multiple projects.</li>
+            <li>Handled deployments and client demos for 5+ projects, ensuring timely delivery of functional prototypes.</li>
+            <li>Worked on Python-based AI and automation tasks (OCR, data processing), cutting manual workflows by ~40%.</li>
+            <li>Reviewed code and promoted best practices, reducing bugs and regressions by ~25%.</li>
+            <li>Collaborated with cross-functional teams to deliver end-to-end solutions, from backend APIs to mobile and web frontends.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <p><strong>Frontend Developer — Valcom Properties</strong></p>
+        <div class="job-meta">
+            <span class="job-company-name">Dubai, UAE</span> |
+            <span class="job-duration">12/2020 – 11/2021</span>
+        </div>
+        <ul>
+            <li>Built a property listings platform with interactive maps and clustering features, inspired by popular real estate platforms like “Zillow”.</li>
+            <li>Developed the frontend using React.js and Mapbox GL JS, enabling smooth map visualizations and efficient handling of large datasets.</li>
+            <li>Added property clustering, filtering, and search, improving user navigation and discoverability by ~35%.</li>
+            <li>Worked with backend APIs for real-time property data and ensured a responsive, mobile-friendly design.</li>
+            <li>Optimized frontend performance, cutting map load times by ~25% and enhancing overall user experience.</li>
+        </ul>
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+<section>
+    <p class="sections">Highlighted Projects</p>
+
+    <div class="project">
+        <p><strong>AGZAGA (E-commerce Platform)</strong></p>
+        <ul>
+            <li>Built a scalable marketplace with React/Redux frontend and Node.js/TypeScript microservices, improving API response times by ~40%.</li>
+            <li>Automated 60% of inventory and order workflows through integrations with NetSuite ERP and third-party seller platforms.</li>
+            <li>Optimized PostgreSQL queries for faster data retrieval and scalable microservice performance.</li>
+            <li>Implemented mobile-first design, SEO enhancements, and modular architecture, boosting user engagement and visibility.</li>
+            <li>Managed deployments using Docker and CI/CD, ensuring reliable, repeatable releases across environments.</li>
+        </ul>
+    </div>
+
+    <div class="project">
+        <p><strong>Pangu Marketplace — Web3 NFT Marketplace (React.js, Node.js, Web3.js, MetaMask)</strong></p>
+        <ul>
+            <li>Built a Web3 NFT marketplace enabling users to sign in with MetaMask and other crypto wallets, supporting 100% seamless authentication.</li>
+            <li>Implemented NFT minting and automatic OpenSea listing, allowing users to mint and list 50+ NFTs per day.</li>
+            <li>Added multilingual support, increasing platform accessibility for users in 2+ languages.</li>
+            <li>Developed bidding, listing, and selling features with secure blockchain interactions, reducing transaction errors by ~20%.</li>
+            <li>Created a React-based Admin Panel to manage users, NFTs, and platform operations, improving admin efficiency by ~30%.</li>
+        </ul>
+    </div>
+
+    <div class="project">
+        <p><strong>Intelligent PDF Reader & Skew Correction System (Python, OpenCV, EasyOCR, pdfplumber)</strong></p>
+        <ul>
+            <li>Built an automated PDF reader capable of extracting text, tables, and images from both digital and scanned documents with ~75% OCR accuracy.</li>
+            <li>Implemented skew detection and correction using OpenCV and NumPy, improving text recognition on tilted pages by ~30%.</li>
+            <li>Leveraged EasyOCR, pdfplumber, and pdf2image for structured data extraction across multi-page PDFs.</li>
+            <li>Added pattern-matching and cleanup logic with regex, difflib, and custom parsing rules to ensure clean and reliable outputs.</li>
+            <li>Designed a batch-processing pipeline to handle large document sets efficiently, reducing manual processing time by ~50%.</li>
+        </ul>
+    </div>
+
+    <div class="project">
+        <p><strong>0–9 Handwriting Recognition — Neural Network Built From Scratch (Python, NumPy)</strong></p>
+        <ul>
+            <li>Built a neural network from scratch in Python/NumPy to classify handwritten digits (0–9), without using high-level ML frameworks.</li>
+            <li>Implemented core ML concepts including backpropagation, activation functions, and gradient descent, achieving ~92–95% classification accuracy on test data.</li>
+            <li>Designed and optimized matrix operations and algorithms for efficient training, demonstrating strong foundations in data structures and machine learning fundamentals.</li>
+        </ul>
+    </div>
+
+    <div class="project">
+        <p><strong>Document Analysis & Distinctive Keyword Extraction System (Python, NLTK, TF-IDF)</strong></p>
+        <ul>
+            <li>Built a full text-processing pipeline from scratch, including tokenization, stopword removal, punctuation filtering, lowercasing, and stemming using NLTK.</li>
+            <li>Implemented custom TF, IDF, and TF-IDF algorithms to analyze document content without relying on external ML libraries.</li>
+            <li>Automatically identified the most distinctive keywords in each document for content summarization and analysis.</li>
+            <li>Applied NLP fundamentals and matrix-based feature extraction to enable search-engine style text ranking and document analysis.</li>
+        </ul>
+    </div>
+
+    <div class="project">
+        <p><strong>NOVUM Platform — Web3 NFT & Financial Platform (React.js, React Native)</strong></p>
+        <ul>
+            <li>Developed a Web3 NFT marketplace allowing users to sign in with MetaMask and other wallets for seamless blockchain authentication.</li>
+            <li>Implemented NFT minting and OpenSea integration, enabling smooth creation and listing of digital assets.</li>
+            <li>Built a dual-role financial platform for merchants and users, enhancing security and usability.</li>
+            <li>Integrated crypto transactions for sending and receiving balances via wallet addresses, ensuring reliable and secure blockchain interactions.</li>
+        </ul>
+    </div>
+
+    <div class="project">
+        <p><strong>Kanban — Full-Stack Application with Node, React, PostgreSQL</strong></p>
+        <ul>
+            <li>Developed a fully functional Kanban board with seamless interaction between React/React Query frontend and Node.js/Express backend, improving task update speed by ~35%.</li>
+            <li>Designed a scalable backend using Prisma ORM and PostgreSQL for efficient management and retrieval of hundreds of tasks per project.</li>
+            <li>Built modular components and clean API routes, reducing future development time by ~25%.</li>
+            <li>Implemented real-time state synchronization, ensuring smooth board and task operations with minimal latency.</li>
+            <li>Showcased strong expertise in full-stack development, REST API design, and database-driven workflows.</li>
+        </ul>
+    </div>
+
+</section>
+
+
+<!-- EDUCATION -->
+<section>
+    <p class="sections">Education</p>
+    <p><strong>MS Computer Science</strong> — University of Siegen, Germany (04/2025 – Ongoing)</p>
+    <p>Focus Areas: Systems, Distributed Architectures, AI, Machine Learning</p>
+    
+    <p><strong>BS Computer Science</strong> — Virtual University of Pakistan (04/2018 – 12/2022)</p>
+    <p>Grade: A</p>
+</section>
+
+
+    <!-- CERTIFICATIONS -->
+    <section>
+        <p class="sections">Certifications</p>
+        <ul>
+            <li>Scientific Computing with Python — <a href="https://www.freecodecamp.org/certification/fccb3ca9ac6-e359-4dc0-902c-ac14681adf70/scientific-computing-with-python-v7">View</a></li>
+            <li>Artificial Intelligence (ML/DL) — <a href="https://drive.google.com/file/d/16FArBbt2T0snA_qoxQ-hEUbbObL4sCGN/view?usp=sharing">View</a></li>
+        </ul>
+    </section>
+
+    <!-- LANGUAGES -->
+    <section>
+        <p class="sections">Languages</p>
+        <ul>
+            <li>Deutsch (B1) — Learning</li>
+            <li>English (C1)</li>
+            <li>Urdu — Mother Tongue</li>
+        </ul>
+    </section>
+
+</body>
+</html>

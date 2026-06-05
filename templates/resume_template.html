@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ resume.personal_details.Name }} - Resume</title>
+
+    <style>
+        @page {
+            size: A4;
+            margin: 10mm 20mm;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.2;
+            color: #000;
+        }
+
+        p {
+            font-size: 11pt;
+            margin: 2px 0;
+            color: #000;
+        }
+
+        .sections {
+            font-size: 13pt;
+            margin: 15px 0 10px 0;
+            color: #000;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        ul {
+            margin-top: 5px;
+            margin-left: 20px;
+            padding-left: 0;
+            list-style-type: disc;
+        }
+
+        ul li {
+            font-size: 11pt;
+            margin-bottom: 2px;
+        }
+
+        strong {
+            font-size: 12pt;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #005f99;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .job, .project {
+            margin-left: 5px;
+        }
+
+        .job-meta {
+            margin-bottom: 5px;
+            font-size: 11pt;
+        }
+
+        .job-company-name {
+            font-weight: bold;
+            flex-grow: 1;
+        }
+
+        .job-duration {
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CONTACT SECTION -->
+    <section>
+        <p><strong>{{ resume.personal_details.Name }}</strong></p>
+        <p>Email: {{ resume.personal_details.Email }}</p>
+        <p>Phone: {{ resume.personal_details.Phone_WhatsApp }}</p>
+        <p>LinkedIn: <a href="{{ resume.personal_details.LinkedIn }}">{{ resume.personal_details.LinkedIn }}</a></p>
+        <p>GitHub: <a href="{{ resume.personal_details.Github }}">{{ resume.personal_details.Github }}</a></p>
+    </section>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <section>
+        <p class="sections">Professional Summary</p>
+        <p>{{ resume.professional_summary }}</p>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section>
+        <p class="sections">Technical Skills</p>
+        <ul>
+            {% for key, values in resume.technical_skills.items() %}
+                <li><strong>{{ key|replace('_', ' & ') }}:</strong> {{ values|join(', ') }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section>
+        <p class="sections">Work Experience</p>
+        {% for job in resume.work_experience %}
+        <div class="job">
+            <p><strong>{{ job.role }} — {{ job.company }}</strong></p>
+            <div class="job-meta">
+                <span class="job-duration">{{ job.time_period }}</span>
+            </div>
+            <ul>
+                {% for contribution in job.contributions %}
+                <li>{{ contribution }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </section>
+
+    <!-- HIGHLIGHTED PROJECTS -->
+    <section>
+        <p class="sections">Highlighted Projects</p>
+        {% for proj in resume.highlighted_projects %}
+        <div class="project">
+            <p><strong>{{ proj.project_name }}</strong></p>
+            <ul>
+                {% for contribution in proj.contributions %}
+                <li>{{ contribution }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+        <p class="sections">Education</p>
+        {% for edu in resume.education %}
+        <p><strong>{{ edu.degree }}</strong> — {{ edu.institution }} {% if edu.time_period %} ({{ edu.time_period }}){% endif %}</p>
+        {% if edu.focus_areas %}<p>Focus Areas: {{ edu.focus_areas|join(', ') }}</p>{% endif %}
+        {% if edu.grade %}<p>Grade: {{ edu.grade }}</p>{% endif %}
+        {% endfor %}
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section>
+        <p class="sections">Certifications</p>
+        <ul>
+            {% for cert in resume.certifications %}
+                <li>{{ cert.name }}{% if cert.link %} — <a href="{{ cert.link }}">View</a>{% endif %}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <!-- LANGUAGES -->
+    <section>
+        <p class="sections">Languages</p>
+        <ul>
+            {% for lang in resume.languages %}
+                <li>{{ lang.name }} — {{ lang.level }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+
+
+</body>
+</html>

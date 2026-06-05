@@ -1,0 +1,153 @@
+{
+  "personal_details": {
+    "Name": "Muhammad Ahmed Ali",
+    "Email": "muhammad4.ali@student.uni-siegen.de",
+    "Phone_WhatsApp": "+49-15228596456",
+    "LinkedIn": "https://linkedin.com/in/muhammad-ahmed-ali-computer-scientist/",
+    "Github": "https://github.com/AhmedAli288"
+  },
+  "professional_summary": "Computer Science Master’s student at the University of Siegen with hands-on experience in full-stack and Web3 development. Skilled in designing and building scalable, modular systems using React, Node.js, TypeScript, and PostgreSQL. Experienced in enterprise backend systems, REST APIs, microservices, containerization (Docker), and CI/CD pipelines. Demonstrated ability to develop e-commerce platforms, NFT marketplaces, project management tools, and automation solutions. Proficient in Python for NLP, OCR, and machine learning, showcasing versatility across web, blockchain, and AI-driven applications. Seeking a Working Student position in IT or Technical Development to apply academic knowledge and practical experience to industrial software and system solutions.",
+  "technical_skills": {
+    "Languages & Frameworks": ["JavaScript", "TypeScript", "Node.js", "Express.js", "React", "Vue.js", ".NET (C#)", "HTML", "CSS"],
+    "Databases": ["PostgreSQL", "MySQL", "MongoDB", "Prisma ORM"],
+    "Web & API Development": ["REST APIs", "Web3 integration", "NFT marketplaces", "Full-Stack Architecture"],
+    "DevOps & Tools": ["Docker", "CI/CD", "Git", "GitHub", "Linux", "Agile/Scrum", "JIRA"],
+    "Concepts & Algorithms": ["Object-Oriented Programming", "Data Structures & Algorithms", "Modular & Scalable System Design"],
+    "Additional": ["OCR & PDF Processing (Python, OpenCV, EasyOCR)", "NLP & TF-IDF", "Neural Networks (Python, NumPy)"]
+  },
+  "work_experience": [
+    {
+      "role": "Software Engineer",
+      "company": "LetsRemotify",
+      "time_period": "06/2022 – 12/2024 | Remote",
+      "contributions": [
+        "Led a small team of 2–3 juniors, reviewing code and guiding project structure improvements.",
+        "Refactored existing projects in NestJS, Next.js, MERN, making them easier to maintain and scale.",
+        "Built and deployed full-stack web apps with React, Node.js, PostgreSQL, MongoDB, Docker, and Heroku.",
+        "Developed React Native mobile apps with Firebase integration for real-time updates and push notifications.",
+        "Designed REST APIs and set up CI/CD pipelines to streamline development and deployments."
+      ]
+    },
+    {
+      "role": "Software Engineer",
+      "company": "AMMAG Technologies",
+      "time_period": "12/2021 – 05/2022 | Lahore, Pakistan",
+      "contributions": [
+        "Built and maintained MERN stack and React Native apps, improving frontend performance and usability across multiple projects.",
+        "Handled deployments and client demos for 5+ projects, ensuring timely delivery of functional prototypes.",
+        "Worked on Python-based AI and automation tasks (OCR, data processing), cutting manual workflows by ~40%.",
+        "Reviewed code and promoted best practices, reducing bugs and regressions by ~25%.",
+        "Collaborated with cross-functional teams to deliver end-to-end solutions, from backend APIs to mobile and web frontends."
+      ]
+    },
+    {
+      "role": "Frontend Developer",
+      "company": "Valcom Properties",
+      "time_period": "12/2020 – 11/2021 | Dubai, UAE",
+      "contributions": [
+        "Built a property listings platform with interactive maps and clustering features, inspired by popular real estate platforms like “Zillow”.",
+        "Developed the frontend using React.js and Mapbox GL JS, enabling smooth map visualizations and efficient handling of large datasets.",
+        "Added property clustering, filtering, and search, improving user navigation and discoverability by ~35%.",
+        "Worked with backend APIs for real-time property data and ensured a responsive, mobile-friendly design.",
+        "Optimized frontend performance, cutting map load times by ~25% and enhancing overall user experience."
+      ]
+    }
+  ],
+  "highlighted_projects": [
+    {
+      "project_name": "AGZAGA (E-commerce Platform)",
+      "contributions": [
+        "Built a scalable marketplace with React/Redux frontend and Node.js/TypeScript microservices, improving API response times by ~40%.",
+        "Automated 60% of inventory and order workflows through integrations with NetSuite ERP and third-party seller platforms.",
+        "Optimized PostgreSQL queries for faster data retrieval and scalable microservice performance.",
+        "Implemented mobile-first design, SEO enhancements, and modular architecture, boosting user engagement and visibility.",
+        "Managed deployments using Docker and CI/CD, ensuring reliable, repeatable releases across environments."
+      ]
+    },
+    {
+      "project_name": "Pangu Marketplace — Web3 NFT Marketplace (React.js, Node.js, Web3.js, MetaMask)",
+      "contributions": [
+        "Built a Web3 NFT marketplace enabling users to sign in with MetaMask and other crypto wallets, supporting 100% seamless authentication.",
+        "Implemented NFT minting and automatic OpenSea listing, allowing users to mint and list 50+ NFTs per day.",
+        "Added multilingual support, increasing platform accessibility for users in 2+ languages.",
+        "Developed bidding, listing, and selling features with secure blockchain interactions, reducing transaction errors by ~20%.",
+        "Created a React-based Admin Panel to manage users, NFTs, and platform operations, improving admin efficiency by ~30%."
+      ]
+    },
+    {
+      "project_name": "Intelligent PDF Reader & Skew Correction System (Python, OpenCV, EasyOCR, pdfplumber)",
+      "contributions": [
+        "Built an automated PDF reader capable of extracting text, tables, and images from both digital and scanned documents with ~75% OCR accuracy.",
+        "Implemented skew detection and correction using OpenCV and NumPy, improving text recognition on tilted pages by ~30%.",
+        "Leveraged EasyOCR, pdfplumber, and pdf2image for structured data extraction across multi-page PDFs.",
+        "Added pattern-matching and cleanup logic with regex, difflib, and custom parsing rules to ensure clean and reliable outputs.",
+        "Designed a batch-processing pipeline to handle large document sets efficiently, reducing manual processing time by ~50%."
+      ]
+    },
+    {
+      "project_name": "0–9 Handwriting Recognition — Neural Network Built From Scratch (Python, NumPy)",
+      "contributions": [
+        "Built a neural network from scratch in Python/NumPy to classify handwritten digits (0–9), without using high-level ML frameworks.",
+        "Implemented core ML concepts including backpropagation, activation functions, and gradient descent, achieving ~92–95% classification accuracy on test data.",
+        "Designed and optimized matrix operations and algorithms for efficient training, demonstrating strong foundations in data structures and machine learning fundamentals."
+      ]
+    },
+    {
+      "project_name": "Document Analysis & Distinctive Keyword Extraction System (Python, NLTK, TF-IDF)",
+      "contributions": [
+        "Built a full text-processing pipeline from scratch, including tokenization, stopword removal, punctuation filtering, lowercasing, and stemming using NLTK.",
+        "Implemented custom TF, IDF, and TF-IDF algorithms to analyze document content without relying on external ML libraries.",
+        "Automatically identified the most distinctive keywords in each document for content summarization and analysis.",
+        "Applied NLP fundamentals and matrix-based feature extraction to enable search-engine style text ranking and document analysis."
+      ]
+    },
+    {
+      "project_name": "NOVUM Platform — Web3 NFT & Financial Platform (React.js, React Native)",
+      "contributions": [
+        "Developed a Web3 NFT marketplace allowing users to sign in with MetaMask and other wallets for seamless blockchain authentication.",
+        "Implemented NFT minting and OpenSea integration, enabling smooth creation and listing of digital assets.",
+        "Built a dual-role financial platform for merchants and users, enhancing security and usability.",
+        "Integrated crypto transactions for sending and receiving balances via wallet addresses, ensuring reliable and secure blockchain interactions."
+      ]
+    },
+    {
+      "project_name": "Kanban — Full-Stack Application with Node, React, PostgreSQL",
+      "contributions": [
+        "Developed a fully functional Kanban board with seamless interaction between React/React Query frontend and Node.js/Express backend, improving task update speed by ~35%.",
+        "Designed a scalable backend using Prisma ORM and PostgreSQL for efficient management and retrieval of hundreds of tasks per project.",
+        "Built modular components and clean API routes, reducing future development time by ~25%.",
+        "Implemented real-time state synchronization, ensuring smooth board and task operations with minimal latency.",
+        "Showcased strong expertise in full-stack development, REST API design, and database-driven workflows."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MS Computer Science",
+      "institution": "University of Siegen, Germany",
+      "time_period": "04/2025 – Ongoing",
+      "focus_areas": ["Systems", "Distributed Architectures", "AI", "Machine Learning"]
+    },
+    {
+      "degree": "BS Computer Science",
+      "institution": "Virtual University of Pakistan",
+      "time_period": "04/2018 – 12/2022",
+      "grade": "A"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Scientific Computing with Python",
+      "link": "https://www.freecodecamp.org/certification/fccb3ca9ac6-e359-4dc0-902c-ac14681adf70/scientific-computing-with-python-v7"
+    },
+    {
+      "name": "Artificial Intelligence (ML/DL)",
+      "link": "https://drive.google.com/file/d/16FArBbt2T0snA_qoxQ-hEUbbObL4sCGN/view?usp=sharing"
+    }
+  ],
+  "languages": [
+    {"name": "Deutsch", "level": "B1 — Learning"},
+    {"name": "English", "level": "C1"},
+    {"name": "Urdu", "level": "Mother Tongue"}
+  ]
+}
