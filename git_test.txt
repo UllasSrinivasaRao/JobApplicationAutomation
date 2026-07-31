@@ -1,0 +1,2 @@
+# GitHub Connection Test
+This is a test file to verify Git tracking and commits.
