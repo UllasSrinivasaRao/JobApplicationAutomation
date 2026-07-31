@@ -1,0 +1,67 @@
+{
+  "titles": [
+    "Werkstudent Softwareentwicklung",
+    "Werkstudent Informatik",
+    "Working Student Software Engineer",
+    "Junior Backend Developer",
+    "Junior Full Stack Developer",
+    "Praktikum Softwareentwicklung"
+  ],
+  "locations": [
+    { "city": "Siegen", "radius_km": 50 },
+    { "city": "Köln", "radius_km": 30 },
+    { "city": "Frankfurt am Main", "radius_km": 30 }
+  ],
+  "keywords_include": [
+    "Python",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Vue",
+    "Node.js",
+    "Express",
+    ".NET",
+    "C#",
+    "HTML",
+    "CSS",
+    "Docker",
+    "REST",
+    "API",
+    "PostgreSQL",
+    "MySQL",
+    "MongoDB",
+    "Git",
+    "CI/CD",
+    "Backend",
+    "Frontend",
+    "Full Stack",
+    "Softwareentwicklung",
+    "Programmierung",
+    "Entwicklung",
+    "IT-Systeme"
+  ],
+  "keywords_exclude": [
+    "Senior",
+    "Teamleitung",
+    "Führungserfahrung",
+    "5+ Jahre",
+    "mindestens 5 Jahre",
+    "Ausbildung als",
+    "Vertrieb",
+    "Sales"
+  ],
+  "min_score": 0.55,
+  "max_jobs_per_query": 25,
+  "published_within_days": 30,
+  "sources": {
+    "arbeitsagentur": { "enabled": true },
+    "websearch": {
+      "enabled": true,
+      "max_results_per_query": 10,
+      "query_templates": [
+        "{title} {city} Stellenanzeige",
+        "{title} {city} jobs career"
+      ]
+    }
+  }
+}

@@ -4,7 +4,7 @@ from jinja2 import Environment, FileSystemLoader
 from xhtml2pdf import pisa
 from io import BytesIO
 
-from src.cerebras_caller import generate_tailored_resume, generate_tailored_cover_letter
+from src.groq_caller import generate_tailored_resume, generate_tailored_cover_letter
 from src.reviewer import review_cv, review_cover_letter
 
 # ---------------------------
@@ -31,8 +31,8 @@ def generate_pdf_from_html(html_string):
 
 st.title("ATS-Tailored Resume Generator")
 
-job_title = st.text_input("Job Title")
-job_desc = st.text_area("Job Description")
+job_title = st.text_input("Job Title", value=st.session_state.get("prefill_title", ""))
+job_desc = st.text_area("Job Description", value=st.session_state.get("prefill_jd", ""), height=250)
 
 # Initialize session state vars
 if "resume" not in st.session_state:

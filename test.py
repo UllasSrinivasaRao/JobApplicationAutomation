@@ -1,18 +1,18 @@
 import os
 from dotenv import load_dotenv
-from cerebras.cloud.sdk import Cerebras
+from groq import Groq
 
 # 1. Load the "Locker" (.env file)
 load_dotenv()
-api_key = os.getenv("CEREBRAS_API_KEY")
+api_key = os.getenv("GROQ_API_KEY")
 
-# 2. Initialize the Cerebras Client
-client = Cerebras(api_key=api_key)
+# 2. Initialize the Groq Client
+client = Groq(api_key=api_key)
 
 # 3. Ask a simple question to test the brain
 try:
     completion = client.chat.completions.create(
-        model="llama3.1-8b",# This is a fast, efficient model
+        model="llama-3.3-70b-versatile",
         messages=[
             {"role": "user", "content": "Hello! Are you ready to review some CVs?"}
         ]

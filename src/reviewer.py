@@ -1,16 +1,18 @@
 import os
 import json
 from dotenv import load_dotenv
-from cerebras.cloud.sdk import Cerebras
+from groq import Groq
+
+MODEL_NAME = "llama-3.3-70b-versatile"
 
 def review_cv(cv_data, job_description):
     load_dotenv()
-    api_key = os.getenv("CEREBRAS_API_KEY")
+    api_key = os.getenv("GROQ_API_KEY")
     if not api_key:
-        raise ValueError("❌ CEREBRAS_API_KEY missing! Please add it to your .env file.")
-        
-    client = Cerebras(api_key=api_key)
-    
+        raise ValueError("❌ GROQ_API_KEY missing! Please add it to your .env file.")
+
+    client = Groq(api_key=api_key)
+
     # Convert dict to JSON string if necessary
     if isinstance(cv_data, dict):
         cv_json = json.dumps(cv_data, indent=2)
@@ -18,9 +20,9 @@ def review_cv(cv_data, job_description):
         cv_json = str(cv_data)
 
     system_message = """
-    You are a Senior Technical Recruiter. Your task is to review a CV (provided in JSON) 
-    against a Job Description. 
-    
+    You are a Senior Technical Recruiter. Your task is to review a CV (provided in JSON)
+    against a Job Description.
+
     CRITERIA:
     1. Does the CV use quantifiable results (numbers, %)?
     2. Does it match the key skills in the Job Description?
@@ -34,7 +36,7 @@ def review_cv(cv_data, job_description):
     user_message = f"JOB DESCRIPTION:\n{job_description}\n\nCV JSON:\n{cv_json}"
 
     response = client.chat.completions.create(
-        model="llama3.1-8b",
+        model=MODEL_NAME,
         messages=[
             {"role": "system", "content": system_message},
             {"role": "user", "content": user_message}
@@ -44,12 +46,12 @@ def review_cv(cv_data, job_description):
 
 def review_cover_letter(cv_data, cover_letter_data, job_description):
     load_dotenv()
-    api_key = os.getenv("CEREBRAS_API_KEY")
+    api_key = os.getenv("GROQ_API_KEY")
     if not api_key:
-        raise ValueError("❌ CEREBRAS_API_KEY missing! Please add it to your .env file.")
-        
-    client = Cerebras(api_key=api_key)
-    
+        raise ValueError("❌ GROQ_API_KEY missing! Please add it to your .env file.")
+
+    client = Groq(api_key=api_key)
+
     if isinstance(cv_data, dict):
         cv_json = json.dumps(cv_data, indent=2)
     else:
@@ -61,9 +63,9 @@ def review_cover_letter(cv_data, cover_letter_data, job_description):
         cl_json = str(cover_letter_data)
 
     system_message = """
-    You are a Senior Technical Recruiter. Your task is to review a Cover Letter (provided in JSON) 
+    You are a Senior Technical Recruiter. Your task is to review a Cover Letter (provided in JSON)
     against a Job Description and the candidate's CV.
-    
+
     CRITERIA:
     1. Does the cover letter match the key skills in the Job Description and CV?
     2. Is the tone professional, action-oriented, and confident?
@@ -77,7 +79,7 @@ def review_cover_letter(cv_data, cover_letter_data, job_description):
     user_message = f"JOB DESCRIPTION:\n{job_description}\n\nCV JSON:\n{cv_json}\n\nCOVER LETTER JSON:\n{cl_json}"
 
     response = client.chat.completions.create(
-        model="llama3.1-8b",
+        model=MODEL_NAME,
         messages=[
             {"role": "system", "content": system_message},
             {"role": "user", "content": user_message}
